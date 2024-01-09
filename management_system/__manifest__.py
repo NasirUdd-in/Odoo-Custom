@@ -10,7 +10,9 @@
        This is for all management system
     """,
     'depends': [],
-    'data': [],
+    'data': [
+        'views/menu.xml',
+    ],
     'demo': [],
     'application': True,
     'sequence': -100,
