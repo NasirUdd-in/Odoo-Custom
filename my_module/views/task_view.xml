@@ -1,0 +1,21 @@
+<!-- my_module/views/task_view.xml -->
+
+<odoo>
+    <data>
+        <!-- Define a simple form view -->
+        <record id="view_task_form" model="ir.ui.view">
+            <field name="name">my_module.task.form</field>
+            <field name="model">my_module.task</field>
+            <field name="arch" type="xml">
+                <form string="Task Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

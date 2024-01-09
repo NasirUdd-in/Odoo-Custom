@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="patient_tree_view" model="ir.ui.view">
+        <field name="name">patient.patient.tree</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="department"/>
+                <field name="age" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="patient_from_view" model="ir.ui.view">
+        <field name="name">patient.patient.form</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department"/>
+                        <field name="age"/>
+                        <field name ="gender"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="patient_action" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="res_model">patient.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- <menuitem id="patient_menu" name="BDtask New" sequence="1"/>
+    <menuitem id="patient_sub_menu" name="Patient" parent="patient_menu" action="patient_action"/> -->
+</odoo>
