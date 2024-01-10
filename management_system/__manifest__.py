@@ -12,7 +12,7 @@
     'depends': [],
     'data': [
         'views/menu.xml',
-        'views/patient_view.xml'
+        'views/patient_view.xml',
     ],
     'demo': [],
     'application': True,
