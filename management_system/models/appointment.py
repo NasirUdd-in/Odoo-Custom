@@ -1,6 +1,6 @@
 from odoo import api, fields, models
 
-class HospitalPatient(models.Model):
+class HospitalAppointment(models.Model):
     _name = "hospital.patient"
     _description = "Hospital Patient"
 
