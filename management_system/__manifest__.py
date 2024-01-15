@@ -14,6 +14,7 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/patient_view.xml',
+        'views/appointment_view.xml'
     ],
     'demo': [],
     'application': True,
@@ -23,3 +24,4 @@
     'assets': {},
     'license': 'LGPL-3',
 }
+

@@ -1,10 +1,9 @@
 from odoo import api, fields, models
 
 class HospitalAppointment(models.Model):
-    _name = "hospital.patient"
+    _name = "hospital.appointment"
     _description = "Hospital Patient"
 
-    name = fields.Char(string= 'Name')
-    age = fields.Integer(string="Age")
-    ref= fields.Char(string= "reference")
-    gender = fields.Selection([('male','Male'), ('female', 'Female')], string="Gender")
+    patient_id = fields.Many2one('hospital.patient', string="Patient")
+    doctor_name = fields.Char(string='Doctor Name')
+    date = fields.Date(string="Date")

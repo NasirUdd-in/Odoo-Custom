@@ -1,24 +1,25 @@
-# -*- coding: utf-8 -*-
 
 {
-    'name': 'BDtask Hospital Management System',
-    'version': '15.0',
-    'summary': 'Hospital Management System',
-    'description': ' Hospital Management System',
-    'category': ' hospital management system',
-    'author': '',
-    'company': '',
-    'maintainer': '',
+    'name': 'AManagement System',
+    'version': '1.0.0',
+    'category': 'Management',
+    'author': 'Nasir Uddin',
+    'summary': 'This is for all management system',
+    'description': """
+       This is for all management system
+    """,
     'depends': [],
-    'website': '',
     'data': [
-    'security/ir.model.access.csv',
-    'views/doctor.xml',
-    'views/patient.xml',
+        'security/ir.model.access.csv',
+        'views/menu.xml',
+        'views/patient_view.xml',
     ],
-    
-    'license': 'LGPL-3',
+    'demo': [],
+    'application': True,
+    'sequence': -100,
     'installable': True,
     'auto_install': False,
-    'application': False,
+    'assets': {},
+    'license': 'LGPL-3',
 }
+
