@@ -16,6 +16,10 @@
       <field name="model">hospital.appointment</field>
       <field name="arch" type="xml">
       <tree>
+      <field name="patient_id"/>
+       <field name="doctor_name"/>
+             <field name="date"/>
+
       </tree>
       </field>
    </record>
@@ -31,8 +35,8 @@
                 <field name="patient_id"/>
           </group>
           <group>
-<!--              <field name="doctor_name"/>-->
-<!--              <field name="date"/>-->
+             <field name="doctor_name"/>
+             <field name="date"/>
 
           </group>
       </group>
