@@ -18,7 +18,7 @@
       <tree>
       <field name="patient_id"/>
        <field name="doctor_name"/>
-             <field name="date"/>
+       <field name="date"/>
 
       </tree>
       </field>
@@ -29,10 +29,19 @@
     <field name="model">hospital.appointment</field>
     <field name="arch" type="xml">
       <form>
+      <header>
+           <field name="state" widget="statusbar" nolabel="1" options="{'clickable':'1'}" statusbar_visible="draft,in_consultation,done"/>
+      </header>
       <sheet>
+       <div class="oe_title">            
+            <h1>
+               <field name="priority" widget="priority" class="mr-3"/>          
+            </h1>
+      </div>
        <group>
           <group>
                 <field name="patient_id"/>
+                <field name="ref"/>
           </group>
           <group>
              <field name="doctor_name"/>
@@ -40,6 +49,23 @@
 
           </group>
       </group>
+      <notebook>
+         <page name="prescription" string="Prescription">
+           <group>
+             <field name="patient_id"/>
+               <field name="ref"/>
+           </group>
+             
+         </page>
+      
+          <page name="pharmacy" string="Pharmacy">
+            <group >
+               <field name="doctor_name"/>
+                <field name="date"/>
+            </group>
+           
+         </page>
+      </notebook>
       </sheet>
       </form>
     </field>
