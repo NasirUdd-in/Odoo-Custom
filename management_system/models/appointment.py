@@ -22,3 +22,16 @@ class HospitalAppointment(models.Model):
     @api.onchange('patient_id')
     def onChange_patient_id(self):
         self.ref = self.patient_id.ref
+    
+    def action_in_consultaion(self):
+        for rec in self:
+            rec.state = 'in_consultation'
+            
+            
+    def action_done(self):
+        for rec in self:
+            rec.state = 'done'
+            
+    def action_cancel(self):
+        for rec in self:
+            rec.state = 'cancel'
