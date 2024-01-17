@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="teacher_tree_view" model="ir.ui.view">
+        <field name="name">teacher.teacher.tree</field>
+        <field name="model">teacher.teacher</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="deperment"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="teacher_form_view" model="ir.ui.view">
+        <field name="name">teacher.teacher.form</field>
+        <field name="model">teacher.teacher</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2">
+                    <group>
+                        <field name="empid"/>
+                        <field name="name"/>
+                        <field name="firstname"/>
+                        <field name="lastname"/>
+                        <field name="deperment"/>
+                        </group>
+                        <group>
+                         <field name="district"/>
+                        <field name="age"/>
+                        <field name="gender" string = "Gender"/>
+                    </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="teacher_action" model="ir.actions.act_window">
+        <field name="name">Teacher</field>
+        <field name="res_model">teacher.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+   <!--  <menuitem id="Management_menu" name="Management" sequence="10"/>   parent="Management_menu" 
+    <menuitem id="Management_sub_menu" name="Management" sequence="10"/>
+    <menuitem id="teacher_sub_menu" name="Teacher" parent="Management_sub_menu" action="teacher_action" sequence="10"/>
+    <menuitem id="student_sub_menu" name="Student" parent="teacher_sub_menu" action="student_action" sequence="10"/> 
+    -->
+ </odoo>

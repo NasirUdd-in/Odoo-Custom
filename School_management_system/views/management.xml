@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="management_tree_view" model="ir.ui.view">
+        <field name="name">management.management.tree</field>
+        <field name="model">management.management</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="studentname"/>
+                <field name="teachername"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="management_form_view" model="ir.ui.view">
+        <field name="name">management.management.form</field>
+        <field name="model">management.management</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2">
+                    <group>
+                        <field name="studentname"/>
+                        <field name="studentFee"/>
+                       
+                        </group>
+                        <group>
+                         <field name="teachername"/>
+                        <field name="teacherSalary"/>
+                         </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="management_action" model="ir.actions.act_window">
+        <field name="name">Management</field>
+        <field name="res_model">management.management</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="Management_menu" name="BDTASK" sequence="1"/>  
+     
+     <menuitem id="Management_submenu" name="Menu" parent="Management_menu"/>   
+    
+    <menuitem id="Managementmenu3" name="Management" parent="Management_submenu"  action="management_action" />
+    <menuitem id="student_sub_menu" name="Student" parent="Management_submenu"  action="student_action" />
+    <menuitem id="teacher_sub_menu" name="Teacher" parent="Management_submenu"  action="teacher_action" />
+ 
+    </odoo>
