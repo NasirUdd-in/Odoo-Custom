@@ -62,14 +62,14 @@
              
          </page>
       
-          <page name="pharmacy" string="Pharmacy">
+         <page name="pharmacy" string="Pharmacy">
             <group >
-               <field name="pharmacy_line_ids">
+               <field name="pharmacy_line_ids" nolabel="1" >
                  <tree editable="bottom">
                      <field name="product_id"/>
                      <field name="price_unit"/>
                      <field name="qty"/>
-                 </tree>
+                </tree>
                  <form>
                    <group>
                      
@@ -80,7 +80,7 @@
                    </group>
                  </form>
                </field>
-               <field name="date"/>
+              
             </group>
            
          </page>

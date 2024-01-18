@@ -10,6 +10,7 @@ class HospitalPatient(models.Model):
     age = fields.Integer(string="Age", compute='_compute_age', store=True)
     ref= fields.Char(string= "reference")
     gender = fields.Selection([('male','Male'), ('female', 'Female')], string="Gender")
+    image = fields.Image(string="Image")
     
     @api.depends('date_of_birth')
     def _compute_age(self):  
