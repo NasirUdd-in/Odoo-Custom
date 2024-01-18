@@ -9,7 +9,7 @@
     'description': """
        This is for all management system
     """,
-    'depends': [],
+    'depends': ['product'],
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
