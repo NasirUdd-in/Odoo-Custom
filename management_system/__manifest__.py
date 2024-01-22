@@ -17,7 +17,11 @@
         # 'views/patient_view.xml',
         'views/appointment_view.xml',
         'views/patient_tag.xml',
-        'views/test.xml'
+        'views/test.xml',
+        'report/report.xml',
+        'report/patient_card.xml',
+        
+    
     ],
     'demo': [],
     'application': True,
