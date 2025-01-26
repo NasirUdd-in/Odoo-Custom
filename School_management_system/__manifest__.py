@@ -4,7 +4,7 @@
     'name': 'School Management System',
     'version': '15.0',
     'name': 'School Management System',
-    'summary': ' School Management System',
+    'summary': ' School Management System test',
     'description': ' School Management System',
     'category': ' School management system',
     'author': '',
